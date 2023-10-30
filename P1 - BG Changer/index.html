@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .bgButton {
+        border: 1px solid black;
+        padding: 10px 20px;
+        font-size: 20px;
+      }
+      #white {
+        background-color: white;
+      }
+      #green {
+        background-color: green;
+      }
+      #red {
+        background-color: red;
+      }
+      #yellow {
+        background-color: yellow;
+      }
+      #purple {
+        background-color: purple;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Project # 1: BG Color Changer</h1>
+    <button class="bgButton" id="white">White</button>
+    <button class="bgButton" id="green">Green</button>
+    <button class="bgButton" id="red">Red</button>
+    <button class="bgButton" id="yellow">Yellow</button>
+    <button class="bgButton" id="purple">Purple</button>
+  </body>
+  <script>
+    const btns = document.querySelectorAll(".bgButton");
+    btns.forEach((btn) => {
+      btn.addEventListener("click", (e) => {
+        document.body.style.backgroundColor = e.target.id;
+      });
+    });
+  </script>
+</html>

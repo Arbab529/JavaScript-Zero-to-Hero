@@ -33,3 +33,14 @@
 //! Equality in JS
 // Strict comparison ===
 // Abstract Comparison ==
+
+//! Event Bubbling
+// when you have an event on parent and an event on child so first the child even will be called and then the parent both events will be called from child to parent. like bubble goes from bottom to top
+
+// Suppose you want to stop event bubbling like when you click on child then only that event will be called but parent event should not be called in that case you will use e.stopPropagation(); this will stop event bubbling;
+
+// Suppose if you want to move from parent to child then you will pass true as third parameter to the addEventListener('click',function(e){},true);
+
+//! Blocking vs Non Blocking Code
+// Blocking code => read file sync
+// Non Blocking code => read file async
