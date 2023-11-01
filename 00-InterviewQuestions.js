@@ -44,3 +44,20 @@
 //! Blocking vs Non Blocking Code
 // Blocking code => read file sync
 // Non Blocking code => read file async
+
+//! Callback Hell
+
+//! JS is a prototype based language and its classes are primarily syntactic sugar over existing prototype-based inheritance mechanism
+
+//! OOP
+// - Object --> collection of properties and methods
+// Constructor function
+// Prototype
+// Classes
+// Instances (new, this)
+
+//! 4 Pillars
+// abstraction --> fetch() --> hiding functionality
+// inheritance --> Add wrapper over data
+// polymorphism --> many ways to do one thing
+// inheritance

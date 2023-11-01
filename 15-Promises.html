@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Promises</title>
+  </head>
+  <body></body>
+  <script>
+    const myPromiseOne = new Promise(function (resolve, reject) {
+      setTimeout(() => {
+        let error = false;
+        if (!error) {
+          resolve({ success: true, message: "success" });
+        } else {
+          reject({ success: false, message: "Failed" });
+        }
+      }, 1000);
+    });
+
+    myPromiseOne
+      .then((data) => {
+        console.log(data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  </script>
+</html>
