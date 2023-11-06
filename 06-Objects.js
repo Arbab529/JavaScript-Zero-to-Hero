@@ -25,3 +25,23 @@ console.log(Object.keys(resultObj));
 console.log(Object.values(resultObj));
 console.log(Object.entries(resultObj));
 console.log(resultObj.hasOwnProperty([1]));
+
+//! Object ko hum universal constant PI ki tarhan kasay bna saktay hain k koi b usay edit na kar sakay
+
+const descripter = Object.getOwnPropertyDescriptor(Math, "PI");
+console.log(descripter);
+
+const userObject = {
+  name: "Arbab",
+  role: "user",
+};
+
+console.log(Object.getOwnPropertyDescriptor(userObject, "role"));
+Object.defineProperty(userObject, "role", {
+  writable: false,
+  enumerable: false,
+});
+userObject.name = "arbab";
+userObject.role = "admin";
+console.log(Object.getOwnPropertyDescriptor(userObject, "role"));
+console.log(userObject);
