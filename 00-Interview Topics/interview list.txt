@@ -1,0 +1,14 @@
+let,const,var 
+primitive type, non primitive type 
+prefix, postfix
+stack, heap
+promises
+closures, lexical scoping
+async await
+exection context, call stack
+this, bind, call
+pollyfill
+class
+constructor 
+super
+for, foreach, for in, for off 
