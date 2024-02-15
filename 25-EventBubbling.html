@@ -1,0 +1,60 @@
+<!--! Event bubbling ka mtlb k child sa parent tuk event call hotay hain nichay sa uper suppose ak div ha us pa on click laga ha and us div man ak button ha us pa b onclick laga ha to sub sa pahlay button wala event call ho ga then div wala event automatically call ho ga, similar event ho ga to hi event bubbling kam karay gi otherwise nahi-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .topDiv,
+      .middleDiv,
+      .innerDiv {
+        padding: 10px;
+      }
+      .topDiv {
+        background: red;
+      }
+      .middleDiv {
+        background: blue;
+      }
+      .innerDiv {
+        background: orange;
+      }
+    </style>
+  </head>
+  <body>
+    <!--! in par event bubbling nahi ho gi  -->
+    <div onmouseover="alert(`hello`)">
+      Div <button onclick="alert(`btn click`)">Button click</button>
+    </div>
+
+    <!--! in par event bubbling  ho gi  -->
+    <div onclick="alert(`hello`)">
+      Div <button onclick="alert(`btn click`)">Button click</button>
+    </div>
+
+    <!--! Propogation example  -->
+    <div class="topDiv" onclick="topDiv()">
+      Top
+      <div class="middleDiv" onclick="middleDiv()">
+        Middle
+        <div class="innerDiv" onclick="innerDiv()">Inner</div>
+      </div>
+    </div>
+  </body>
+  <script>
+    function topDiv() {
+      alert("Top");
+    }
+    function middleDiv() {
+      event.stopPropagation();
+      alert("Middle");
+    }
+    function innerDiv() {
+      alert("Inner");
+    }
+  </script>
+</html>
+
+<!--! suppose maray pass teen div hain top, middle, inner main chahta hun inner pa click karun to inner or middle ka event call ho just baki top ka na ho to us k liya jahan par stop karna ha us k onclick function main event.stopPropagation() call kar dayn gay -->
