@@ -54,7 +54,12 @@
     function innerDiv() {
       alert("Inner");
     }
+    // document.getElementById("top").addEventListener("click", () => {}, true); // capturing example because third param true ha
+
+    // document.getElementById("top").addEventListener("click", () => {}); // capturing example because third param by default false ha
   </script>
 </html>
 
 <!--! suppose maray pass teen div hain top, middle, inner main chahta hun inner pa click karun to inner or middle ka event call ho just baki top ka na ho to us k liya jahan par stop karna ha us k onclick function main event.stopPropagation() call kar dayn gay -->
+
+<!--! agar top sa bottom events call houn to usay event capturing kahtay hain event listener main teen chezayn hoti hain event, callback, boolvalue for capturing=>true bubbling=>false  -->
