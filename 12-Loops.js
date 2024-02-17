@@ -53,7 +53,7 @@ const filterValue = arr.filter((value) => value > 2);
 console.log(filterValue);
 console.log(arr);
 
-//! Map
+//! Map --> return karta ha newArray
 
 const mapValue = arr.map((value) => value > 2);
 console.log(filterValue);
@@ -69,3 +69,35 @@ const sumOfArr = arr1.reduce(
 );
 
 console.log(`Reduce: ${sumOfArr}`);
+
+// ! Real world Example ==> Ak product list ha us main sa tmam products ki list nikali or un ka sum kar liya
+//! like hum cart main ya functionality add kar saktay hain
+
+const products = [
+  {
+    cost: 20,
+  },
+  {
+    cost: 20,
+  },
+  {
+    cost: 20,
+  },
+  {
+    cost: 20,
+  },
+  {
+    cost: 20,
+  },
+  {
+    cost: 20,
+  },
+  {
+    cost: 20,
+  },
+];
+
+const result = products
+  .map((value) => value.cost)
+  .reduce((prev, curr) => prev + curr, 0);
+console.log(result);
