@@ -27,15 +27,17 @@ student.__proto__ = user;
 console.log(student.getAge());
 console.log(teacher.getAge());
 
-//! prototype directly load nahi karta data jub chahiya hota ha tub load kartay hain
+//? Global Object prototype
 
-//! kisi b object k sath poray project man ya prototype use kar saktay hain
+//! prototype directly load nahi karta data jub chahiya hota ha tub load kartay hain, kisi b object k sath poray project man ya prototype use kar saktay hain
 
 Object.prototype.myObj = "Hello World";
 Object.prototype.myFunc = () => {
   return "Hello World!";
 };
 // user.myFunc()
+
+//? Global String prototype
 
 //! kisi b string k sath poray project man ya prototype use kar saktay hain
 

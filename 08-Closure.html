@@ -9,6 +9,9 @@
     <button id="red">Red</button>
     <button id="orange">Orange</button>
   </body>
+
+  <!-- In JavaScript, functions create their own lexical scope.
+A closure is formed when an inner function accesses variables from an outer function, even after the outer function has returned. -->
   <script>
     function colorChange(color) {
       return () => {
